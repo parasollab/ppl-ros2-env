@@ -1,0 +1,8 @@
+{
+  "package_name": "teb_msgs",
+  "non_idl_tuples": [
+    "/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_msgs:msg/FeedbackMsg.msg",
+    "/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_msgs:msg/TrajectoryMsg.msg",
+    "/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_msgs:msg/TrajectoryPointMsg.msg"
+  ]
+}

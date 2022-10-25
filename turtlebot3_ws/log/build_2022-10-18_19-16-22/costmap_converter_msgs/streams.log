@@ -1,0 +1,238 @@
+[0.103s] Invoking command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/costmap_converter/costmap_converter_msgs -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/costmap_converter_msgs
+[0.806s] -- The C compiler identification is GNU 9.4.0
+[0.806s] -- The CXX compiler identification is GNU 9.4.0
+[0.806s] -- Check for working C compiler: /usr/bin/cc
+[0.807s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.807s] -- Detecting C compiler ABI info
+[0.933s] -- Detecting C compiler ABI info - done
+[0.962s] -- Detecting C compile features
+[0.962s] -- Detecting C compile features - done
+[0.969s] -- Check for working CXX compiler: /usr/bin/c++
+[1.185s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.185s] -- Detecting CXX compiler ABI info
+[1.403s] -- Detecting CXX compiler ABI info - done
+[1.438s] -- Detecting CXX compile features
+[1.440s] -- Detecting CXX compile features - done
+[1.450s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[1.512s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.512s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.751s] -- Found builtin_interfaces: 1.0.3 (/opt/ros/galactic/share/builtin_interfaces/cmake)
+[1.826s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.845s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[2.093s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.189s] -- Found FastRTPS: /opt/ros/galactic/include  
+[2.431s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.528s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[2.720s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[2.820s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.469s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+[4.231s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.575s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.640s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[4.644s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[4.722s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[4.723s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.723s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[4.723s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[4.787s] -- Found PythonExtra: .so  
+[5.032s] -- Configuring done
+[5.192s] -- Generating done
+[5.201s] -- Build files have been written to: /home/mike/turtlebot3_ws/build/costmap_converter_msgs
+[5.233s] Invoked command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/costmap_converter/costmap_converter_msgs -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/costmap_converter_msgs
+[5.235s] Invoking command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/costmap_converter_msgs -- -j4 -l4
+[5.345s] [35m[1mScanning dependencies of target costmap_converter_msgs__cpp[0m
+[5.376s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.392s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.725s] [  5%] Built target costmap_converter_msgs__cpp
+[6.793s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.801s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_generator_c[0m
+[6.815s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.832s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.886s] [ 15%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_generator_c.dir/rosidl_generator_c/costmap_converter_msgs/msg/detail/obstacle_msg__functions.c.o[0m
+[7.268s] [ 17%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_generator_c.dir/rosidl_generator_c/costmap_converter_msgs/msg/detail/obstacle_array_msg__functions.c.o[0m
+[7.606s] [ 20%] [32m[1mLinking C shared library libcostmap_converter_msgs__rosidl_generator_c.so[0m
+[7.948s] [ 20%] Built target costmap_converter_msgs__rosidl_generator_c
+[8.061s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[9.051s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_cpp[0m
+[9.182s] [ 25%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/costmap_converter_msgs/msg/obstacle_msg__type_support.cpp.o[0m
+[9.239s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_introspection_cpp[0m
+[9.274s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[9.374s] [ 28%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.cpp.o[0m
+[9.413s] [ 30%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/costmap_converter_msgs/msg/detail/dds_fastrtps/obstacle_msg__type_support.cpp.o[0m
+[10.338s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_introspection_c[0m
+[10.487s] [ 33%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.c.o[0m
+[10.786s] [ 35%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.c.o[0m
+[11.103s] [ 38%] [32m[1mLinking C shared library libcostmap_converter_msgs__rosidl_typesupport_introspection_c.so[0m
+[11.268s] [ 38%] Built target costmap_converter_msgs__rosidl_typesupport_introspection_c
+[11.320s] [ 41%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.cpp.o[0m
+[11.329s] [ 43%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/costmap_converter_msgs/msg/obstacle_array_msg__type_support.cpp.o[0m
+[11.501s] [ 46%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[12.690s] [ 48%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/costmap_converter_msgs/msg/detail/dds_fastrtps/obstacle_array_msg__type_support.cpp.o[0m
+[13.223s] [ 51%] [32m[1mLinking CXX shared library libcostmap_converter_msgs__rosidl_typesupport_cpp.so[0m
+[13.503s] [ 51%] Built target costmap_converter_msgs__rosidl_typesupport_cpp
+[13.515s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_c[0m
+[13.590s] [ 53%] [32m[1mLinking CXX shared library libcostmap_converter_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[13.626s] [ 56%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/costmap_converter_msgs/msg/obstacle_msg__type_support.cpp.o[0m
+[13.642s] [ 58%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/costmap_converter_msgs/msg/obstacle_array_msg__type_support.cpp.o[0m
+[13.905s] [ 61%] [32m[1mLinking CXX shared library libcostmap_converter_msgs__rosidl_typesupport_c.so[0m
+[14.278s] [ 61%] Built target costmap_converter_msgs__rosidl_typesupport_c
+[14.320s] [ 61%] Built target costmap_converter_msgs__rosidl_typesupport_introspection_cpp
+[15.316s] [ 64%] [32m[1mLinking CXX shared library libcostmap_converter_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.009s] [ 64%] Built target costmap_converter_msgs__rosidl_typesupport_fastrtps_cpp
+[16.090s] [ 66%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[18.062s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_fastrtps_c[0m
+[18.179s] [ 69%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/costmap_converter_msgs/msg/detail/obstacle_msg__type_support_c.cpp.o[0m
+[18.195s] [ 71%] [32mBuilding CXX object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support_c.cpp.o[0m
+[20.397s] [ 74%] [32m[1mLinking CXX shared library libcostmap_converter_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[21.482s] [ 74%] Built target costmap_converter_msgs__rosidl_typesupport_fastrtps_c
+[21.656s] [35m[1mScanning dependencies of target costmap_converter_msgs[0m
+[21.766s] [ 74%] Built target costmap_converter_msgs
+[21.851s] [35m[1mScanning dependencies of target costmap_converter_msgs__py[0m
+[21.962s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[27.102s] [ 76%] Built target costmap_converter_msgs__py
+[27.202s] [35m[1mScanning dependencies of target costmap_converter_msgs__python[0m
+[27.334s] [ 79%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__python.dir/rosidl_generator_py/costmap_converter_msgs/msg/_obstacle_msg_s.c.o[0m
+[27.409s] [ 82%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__python.dir/rosidl_generator_py/costmap_converter_msgs/msg/_obstacle_array_msg_s.c.o[0m
+[28.133s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/costmap_converter_msgs/libcostmap_converter_msgs__python.so[0m
+[28.695s] [ 84%] Built target costmap_converter_msgs__python
+[28.791s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[28.820s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_c__pyext[0m
+[28.978s] [ 87%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/costmap_converter_msgs/_costmap_converter_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[28.991s] [ 89%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/costmap_converter_msgs/_costmap_converter_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[29.802s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[29.870s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[30.207s] [ 94%] Built target costmap_converter_msgs__rosidl_typesupport_c__pyext
+[30.249s] [ 94%] Built target costmap_converter_msgs__rosidl_typesupport_introspection_c__pyext
+[30.319s] [35m[1mScanning dependencies of target costmap_converter_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[30.479s] [ 97%] [32mBuilding C object CMakeFiles/costmap_converter_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/costmap_converter_msgs/_costmap_converter_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[31.186s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[31.795s] [100%] Built target costmap_converter_msgs__rosidl_typesupport_fastrtps_c__pyext
+[31.861s] Invoked command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/costmap_converter_msgs -- -j4 -l4
+[33.467s] Invoking command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/costmap_converter_msgs
+[33.614s] -- Install configuration: ""
+[33.617s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/ament_index/resource_index/rosidl_interfaces/costmap_converter_msgs
+[33.618s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs
+[33.618s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg
+[33.618s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail
+[33.619s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__struct.h
+[33.619s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.h
+[33.619s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__functions.h
+[33.619s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__functions.c
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__functions.c
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__functions.h
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.h
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__struct.h
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/obstacle_msg.h
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/rosidl_generator_c__visibility_control.h
+[33.620s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/obstacle_array_msg.h
+[33.621s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/library_path.sh
+[33.621s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/library_path.dsv
+[33.626s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_generator_c.so
+[33.627s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_generator_c.so" to ""
+[33.627s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs
+[33.629s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg
+[33.634s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail
+[33.634s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_fastrtps_c.h
+[33.634s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_fastrtps_c.h
+[33.634s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[33.635s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_fastrtps_c.so
+[33.636s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[33.636s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs
+[33.636s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg
+[33.637s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail
+[33.637s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/dds_fastrtps
+[33.637s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[33.637s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[33.638s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[33.638s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_fastrtps_cpp.so
+[33.645s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[33.645s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs
+[33.650s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg
+[33.650s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail
+[33.650s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.c
+[33.658s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_introspection_c.h
+[33.658s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_introspection_c.h
+[33.658s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.c
+[33.658s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[33.660s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_introspection_c.so
+[33.666s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_introspection_c.so" to ""
+[33.666s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_c.so
+[33.679s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_c.so" to ""
+[33.679s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs
+[33.679s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg
+[33.680s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/obstacle_msg.hpp
+[33.680s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/obstacle_array_msg.hpp
+[33.682s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail
+[33.682s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__struct.hpp
+[33.683s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__traits.hpp
+[33.683s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__builder.hpp
+[33.684s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__builder.hpp
+[33.686s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__traits.hpp
+[33.690s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__struct.hpp
+[33.690s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs
+[33.691s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg
+[33.691s] -- Up-to-date: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail
+[33.691s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__type_support.cpp
+[33.691s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__rosidl_typesupport_introspection_cpp.hpp
+[33.694s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_msg__rosidl_typesupport_introspection_cpp.hpp
+[33.702s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/include/costmap_converter_msgs/msg/detail/obstacle_array_msg__type_support.cpp
+[33.703s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_introspection_cpp.so
+[33.715s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[33.715s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_cpp.so
+[33.716s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__rosidl_typesupport_cpp.so" to ""
+[33.716s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/pythonpath.sh
+[33.716s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/pythonpath.dsv
+[33.717s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/__init__.py
+[34.150s] Compiling '/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/__init__.py'...
+[34.256s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/msg
+[34.257s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/msg/__init__.py
+[34.258s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/msg/_obstacle_msg.py
+[34.259s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/msg/_obstacle_array_msg_s.c
+[34.260s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/msg/_obstacle_array_msg.py
+[34.261s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/msg/_obstacle_msg_s.c
+[34.262s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[34.264s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[34.266s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[34.269s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[34.270s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[34.282s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages/costmap_converter_msgs/costmap_converter_msgs_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[34.283s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__python.so
+[34.295s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/libcostmap_converter_msgs__python.so" to ""
+[34.295s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleMsg.idl
+[34.296s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleArrayMsg.idl
+[34.296s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleMsg.msg
+[34.305s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/msg/ObstacleArrayMsg.msg
+[34.307s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/ament_index/resource_index/package_run_dependencies/costmap_converter_msgs
+[34.313s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/ament_index/resource_index/parent_prefix_path/costmap_converter_msgs
+[34.317s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/ament_prefix_path.sh
+[34.322s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/ament_prefix_path.dsv
+[34.330s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/path.sh
+[34.332s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/environment/path.dsv
+[34.333s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.bash
+[34.335s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.sh
+[34.336s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.zsh
+[34.338s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/local_setup.dsv
+[34.340s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/package.dsv
+[34.346s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/ament_index/resource_index/packages/costmap_converter_msgs
+[34.350s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_generator_cExport.cmake
+[34.354s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_generator_cExport-noconfig.cmake
+[34.361s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cExport.cmake
+[34.370s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[34.378s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cExport.cmake
+[34.383s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[34.391s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_generator_cppExport.cmake
+[34.392s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[34.395s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[34.398s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cppExport.cmake
+[34.406s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[34.411s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/rosidl_cmake-extras.cmake
+[34.416s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[34.418s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[34.419s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[34.421s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[34.422s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[34.424s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[34.427s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgsConfig.cmake
+[34.430s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/cmake/costmap_converter_msgsConfig-version.cmake
+[34.434s] -- Installing: /home/mike/turtlebot3_ws/install/costmap_converter_msgs/share/costmap_converter_msgs/package.xml
+[34.456s] Invoked command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/costmap_converter_msgs

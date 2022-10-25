@@ -1,0 +1,566 @@
+-- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found costmap_converter: 0.1.2 (/home/mike/turtlebot3_ws/install/costmap_converter/share/costmap_converter/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found dwb_critics: 1.0.12 (/opt/ros/galactic/share/dwb_critics/cmake)
+-- Found teb_msgs: 0.0.1 (/home/mike/turtlebot3_ws/install/teb_msgs/share/teb_msgs/cmake)
+-- Found tf2_eigen: 0.17.4 (/opt/ros/galactic/share/tf2_eigen/cmake)
+-- System: Linux-5.15.0-50-generic
+-- /opt/ros/galactic/share/tinyxml2_vendor/cmake/Modules;/opt/ros/galactic/share/eigen3_cmake_module/cmake/Modules;/opt/ros/galactic/share/fastrtps_cmake_module/cmake/Modules;/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/cmake_modules
+-- Found SuiteSparse
+-- Searching for g2o ...
+-- Found g2o headers in: /usr/local/include/g2o
+-- Found libg2o: /usr/local/lib/libg2o_csparse_extension.so;/usr/local/lib/libg2o_core.so;/usr/local/lib/libg2o_stuff.so;/usr/local/lib/libg2o_types_slam2d.so;/usr/local/lib/libg2o_types_slam3d.so;/usr/local/lib/libg2o_solver_cholmod.so;/usr/local/lib/libg2o_solver_pcg.so;/usr/local/lib/libg2o_solver_csparse.so;/usr/local/lib/libg2o_incremental.so
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0")  
+-- Found ament_cmake_gtest: 1.1.5 (/opt/ros/galactic/share/ament_cmake_gtest/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mike/turtlebot3_ws/build/teb_local_planner
+[35m[1mScanning dependencies of target teb_local_planner[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/optimal_planner.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/visualization.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/timed_elastic_band.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/obstacles.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/recovery_behaviors.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/teb_config.cpp.o[0m
+In file included from [01m[K/usr/local/include/g2o/core/base_variable_sized_edge.h:115[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_multi_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:51[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/optimal_planner.cpp:42[m[K:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:[m[K In member function ‘[01m[Kvirtual void g2o::BaseVariableSizedEdge<D, E>::linearizeOplus()[m[K’:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:90:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kfill[m[K’
+   90 |     add_vi.[01;31m[Kfill[m[K(0.);
+      |            [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:94:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+   94 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:100:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+  100 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/local/include/g2o/core/base_variable_sized_edge.h:115[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_multi_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:51[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/visualization.cpp:41[m[K:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:[m[K In member function ‘[01m[Kvirtual void g2o::BaseVariableSizedEdge<D, E>::linearizeOplus()[m[K’:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:90:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kfill[m[K’
+   90 |     add_vi.[01;31m[Kfill[m[K(0.);
+      |            [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:94:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+   94 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:100:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+  100 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+[ 70%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/homotopy_class_planner.cpp.o[0m
+In file included from [01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.h:311[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_binary_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/optimal_planner.cpp:42[m[K:
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+In file included from [01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.h:311[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_binary_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/visualization.cpp:41[m[K:
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[ 80%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o[0m
+make[2]: *** [CMakeFiles/teb_local_planner.dir/build.make:102: CMakeFiles/teb_local_planner.dir/src/visualization.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/usr/local/include/g2o/core/base_variable_sized_edge.h:115[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_multi_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:51[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/homotopy_class_planner.h:61[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/homotopy_class_planner.cpp:39[m[K:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:[m[K In member function ‘[01m[Kvirtual void g2o::BaseVariableSizedEdge<D, E>::linearizeOplus()[m[K’:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:90:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kfill[m[K’
+   90 |     add_vi.[01;31m[Kfill[m[K(0.);
+      |            [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:94:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+   94 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:100:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+  100 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/teb_local_planner.dir/build.make:76: CMakeFiles/teb_local_planner.dir/src/optimal_planner.cpp.o] Error 1
+In file included from [01m[K/usr/local/include/g2o/core/base_variable_sized_edge.h:115[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_multi_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:51[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h:50[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/teb_local_planner_ros.cpp:39[m[K:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:[m[K In member function ‘[01m[Kvirtual void g2o::BaseVariableSizedEdge<D, E>::linearizeOplus()[m[K’:
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:90:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kfill[m[K’
+   90 |     add_vi.[01;31m[Kfill[m[K(0.);
+      |            [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:94:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+   94 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_variable_sized_edge.hpp:100:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ceres::internal::FixedArray<double>[m[K’ has no member named ‘[01m[Kdata[m[K’
+  100 |       vi->oplus(add_vi.[01;31m[Kdata[m[K());
+      |                        [01;31m[K^~~~[m[K
+In file included from [01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.h:311[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_binary_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/homotopy_class_planner.h:61[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/homotopy_class_planner.cpp:39[m[K:
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<__var_indices ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<__var_indices ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+In file included from [01m[K/opt/ros/galactic/include/pluginlib/class_loader_imp.hpp:73[m[K,
+                 from [01m[K/opt/ros/galactic/include/pluginlib/class_loader.hpp:356[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h:42[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/teb_local_planner_ros.cpp:39[m[K:
+[01m[K/home/mike/turtlebot3_ws/install/costmap_converter/include/costmap_converter/costmap_converter_interface.h:[m[K In member function ‘[01m[Kvoid costmap_converter::BaseCostmapToPolygons::startWorker(rclcpp::GenericRate<std::chrono::_V2::system_clock>::SharedPtr, nav2_costmap_2d::Costmap2D*, bool)[m[K’:
+[01m[K/home/mike/turtlebot3_ws/install/costmap_converter/include/costmap_converter/costmap_converter_interface.h:197:41:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K-Wformat-extra-args[m[K]
+  197 |         RCLCPP_DEBUG(nh_->get_logger(), [01;35m[K"costmap_converter"[m[K, "Spinning up a thread for the CostmapToPolygons plugin");
+      |                                         [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mike/turtlebot3_ws/install/costmap_converter/include/costmap_converter/costmap_converter_interface.h:[m[K In member function ‘[01m[Kvoid costmap_converter::BaseCostmapToDynamicObstacles::loadStaticCostmapConverterPlugin(const string&, rclcpp::Node::SharedPtr)[m[K’:
+[01m[K/home/mike/turtlebot3_ws/install/costmap_converter/include/costmap_converter/costmap_converter_interface.h:313:32:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kconst string[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} [[01;35m[K-Wformat=[m[K]
+  313 |       RCLCPP_INFO(getLogger(), [01;35m[K"CostmapToDynamicObstacles: underlying costmap conversion plugin for static obstacles %s loaded."[m[K, plugin_name);
+      |                                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h:68[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/teb_local_planner_ros.cpp:39[m[K:
+[01m[K/home/mike/turtlebot3_ws/install/costmap_converter/include/costmap_converter/costmap_converter_interface.h:313:119:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  313 |       RCLCPP_INFO(getLogger(), "CostmapToDynamicObstacles: underlying costmap conversion plugin for static obstacles [01;36m[K%s[m[K loaded.", plugin_name);
+      |                                                                                                                      [01;36m[K~^[m[K
+      |                                                                                                                       [01;36m[K|[m[K
+      |                                                                                                                       [01;36m[Kchar*[m[K
+make[2]: *** [CMakeFiles/teb_local_planner.dir/build.make:141: CMakeFiles/teb_local_planner.dir/src/homotopy_class_planner.cpp.o] Error 1
+In file included from [01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.h:311[m[K,
+                 from [01m[K/usr/local/include/g2o/core/base_binary_edge.h:30[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/base_teb_edges.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/g2o_types/edge_velocity.h:49[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/optimal_planner.h:63[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/include/teb_local_planner/teb_local_planner_ros.h:50[m[K,
+                 from [01m[K/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/src/teb_local_planner_ros.cpp:39[m[K:
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0, 1}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const Eigen::Matrix<double, 2, 1>*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0}; int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = const teb_local_planner::Obstacle*; VertexTypes = {teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0}; int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 1; E = double; VertexTypes = {teb_local_planner::VertexTimeDiff}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 1>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 0; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+/usr/local/include/g2o/core/base_fixed_sized_edge.hpp: In instantiation of ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusN() [with int N = 1; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’:
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:206:43:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplusNs(std::index_sequence<_Ind ...>) [with long unsigned int ...Ints = {0, 1}; int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}; std::index_sequence<_Ind ...> = std::integer_sequence<long unsigned int, 0, 1>][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:214:3:[m[K   required from ‘[01m[Kvoid g2o::BaseFixedSizedEdge<D, E, VertexTypes>::linearizeOplus() [with int D = 2; E = double; VertexTypes = {teb_local_planner::VertexPose, teb_local_planner::VertexPose}][m[K’
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:211:6:[m[K   required from here
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:179:14:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kfill[m[K’
+  179 |   [01;31m[Kadd_vertex.fill[m[K(0.);
+      |   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:186:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  186 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/include/g2o/core/base_fixed_sized_edge.hpp:192:30:[m[K [01;31m[Kerror: [m[K‘[01m[KFixedArray[m[K’ {aka ‘[01m[Kclass ceres::internal::FixedArray<double, 3>[m[K’} has no member named ‘[01m[Kdata[m[K’
+  192 |     vertex->oplus([01;31m[Kadd_vertex.data[m[K());
+      |                   [01;31m[K~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/teb_local_planner.dir/build.make:154: CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/teb_local_planner.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

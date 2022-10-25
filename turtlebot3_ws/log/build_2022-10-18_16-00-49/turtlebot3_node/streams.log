@@ -1,0 +1,51 @@
+[0.075s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/turtlebot3_node
+[0.481s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.482s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.482s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.482s] -- Found dynamixel_sdk: 3.7.40 (/opt/ros/galactic/share/dynamixel_sdk/cmake)
+[0.483s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[0.483s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.486s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.631s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.839s] -- Found message_filters: 3.2.6 (/opt/ros/galactic/share/message_filters/cmake)
+[0.968s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.973s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.019s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.297s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[1.439s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[1.589s] -- Found std_srvs: 2.2.4 (/opt/ros/galactic/share/std_srvs/cmake)
+[1.615s] -- Found tf2: 0.17.4 (/opt/ros/galactic/share/tf2/cmake)
+[1.636s] -- Found tf2_ros: 0.17.4 (/opt/ros/galactic/share/tf2_ros/cmake)
+[2.300s] -- Found turtlebot3_msgs: 2.2.2 (/opt/ros/galactic/share/turtlebot3_msgs/cmake)
+[2.637s] -- Configuring done
+[2.686s] -- Generating done
+[2.690s] -- Build files have been written to: /home/mike/turtlebot3_ws/build/turtlebot3_node
+[2.845s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/turtlebot3_node
+[2.849s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[3.038s] [ 85%] Built target turtlebot3_node_lib
+[3.138s] [100%] Built target turtlebot3_ros
+[3.170s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[3.343s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_node
+[3.359s] -- Install configuration: ""
+[3.360s] -- Execute custom install script
+[3.370s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/burger.yaml
+[3.372s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle.yaml
+[3.372s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle_pi.yaml
+[3.373s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros
+[3.374s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node
+[3.374s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node
+[3.375s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.sh
+[3.376s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.dsv
+[3.377s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.sh
+[3.377s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.dsv
+[3.378s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.bash
+[3.379s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.sh
+[3.379s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.zsh
+[3.379s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.dsv
+[3.380s] -- Symlinking: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/package.dsv
+[3.396s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/packages/turtlebot3_node
+[3.409s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.411s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig.cmake
+[3.412s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig-version.cmake
+[3.417s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/package.xml
+[3.477s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mike/turtlebot3_ws/install/turtlebot3_teleop:/home/mike/turtlebot3_ws/install/turtlebot3_example:/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_node

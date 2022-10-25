@@ -1,0 +1,23 @@
+[0.035s] Invoking command in '/home/mike/turtlebot3_ws/build/teb_local_planner': AMENT_PREFIX_PATH=/home/mike/turtlebot3_ws/install/teb_msgs:/home/mike/turtlebot3_ws/install/costmap_converter:/home/mike/turtlebot3_ws/install/costmap_converter_msgs CMAKE_PREFIX_PATH=/home/mike/turtlebot3_ws/install/teb_msgs:/home/mike/turtlebot3_ws/install/costmap_converter:/home/mike/turtlebot3_ws/install/costmap_converter_msgs LD_LIBRARY_PATH=/home/mike/turtlebot3_ws/install/teb_msgs/lib:/home/mike/turtlebot3_ws/install/costmap_converter/lib:/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib PATH=/home/mike/turtlebot3_ws/install/costmap_converter/bin:${PATH} PYTHONPATH=/home/mike/turtlebot3_ws/install/teb_msgs/lib/python3.8/site-packages:/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/teb_local_planner
+[0.060s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.087s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.272s] Traceback (most recent call last):
+[0.272s]   File "/opt/ros/galactic/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.273s]     from ament_package.templates import get_environment_hook_template_path
+[0.273s] ModuleNotFoundError: No module named 'ament_package'
+[0.304s] CMake Error at /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.304s]   execute_process(/usr/bin/python3
+[0.304s]   /opt/ros/galactic/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.305s]   /home/mike/turtlebot3_ws/build/teb_local_planner/ament_cmake_package_templates/templates.cmake)
+[0.305s]   returned error code 1
+[0.305s] Call Stack (most recent call first):
+[0.305s]   /opt/ros/galactic/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.305s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.305s]   /opt/ros/galactic/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.305s]   CMakeLists.txt:17 (find_package)
+[0.305s] 
+[0.305s] 
+[0.306s] -- Configuring incomplete, errors occurred!
+[0.306s] See also "/home/mike/turtlebot3_ws/build/teb_local_planner/CMakeFiles/CMakeOutput.log".
+[0.306s] See also "/home/mike/turtlebot3_ws/build/teb_local_planner/CMakeFiles/CMakeError.log".
+[0.308s] Invoked command in '/home/mike/turtlebot3_ws/build/teb_local_planner' returned '1': AMENT_PREFIX_PATH=/home/mike/turtlebot3_ws/install/teb_msgs:/home/mike/turtlebot3_ws/install/costmap_converter:/home/mike/turtlebot3_ws/install/costmap_converter_msgs CMAKE_PREFIX_PATH=/home/mike/turtlebot3_ws/install/teb_msgs:/home/mike/turtlebot3_ws/install/costmap_converter:/home/mike/turtlebot3_ws/install/costmap_converter_msgs LD_LIBRARY_PATH=/home/mike/turtlebot3_ws/install/teb_msgs/lib:/home/mike/turtlebot3_ws/install/costmap_converter/lib:/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib PATH=/home/mike/turtlebot3_ws/install/costmap_converter/bin:${PATH} PYTHONPATH=/home/mike/turtlebot3_ws/install/teb_msgs/lib/python3.8/site-packages:/home/mike/turtlebot3_ws/install/costmap_converter_msgs/lib/python3.8/site-packages /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/teb_local_planner

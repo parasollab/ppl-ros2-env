@@ -1,0 +1,19 @@
+[1.673s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_example': PYTHONPATH=/home/mike/turtlebot3_ws/install/turtlebot3_example/lib/python3.8/site-packages: /usr/bin/python3 setup.py develop --prefix /home/mike/turtlebot3_ws/install/turtlebot3_example --editable --build-directory /home/mike/turtlebot3_ws/build/turtlebot3_example/build --no-deps install_data --install-dir /home/mike/turtlebot3_ws/install/turtlebot3_example
+[2.294s] running develop
+[2.557s] running egg_info
+[2.558s] writing turtlebot3_example.egg-info/PKG-INFO
+[2.560s] writing dependency_links to turtlebot3_example.egg-info/dependency_links.txt
+[2.561s] writing entry points to turtlebot3_example.egg-info/entry_points.txt
+[2.561s] writing requirements to turtlebot3_example.egg-info/requires.txt
+[2.564s] writing top-level names to turtlebot3_example.egg-info/top_level.txt
+[2.643s] reading manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[2.646s] writing manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[2.710s] running build_ext
+[2.711s] Creating /home/mike/turtlebot3_ws/install/turtlebot3_example/lib/python3.8/site-packages/turtlebot3-example.egg-link (link to .)
+[2.713s] Installing turtlebot3_obstacle_detection script to /home/mike/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.713s] Installing turtlebot3_patrol_client script to /home/mike/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.714s] Installing turtlebot3_patrol_server script to /home/mike/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.714s] Installing turtlebot3_position_control script to /home/mike/turtlebot3_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.714s] 
+[2.714s] Installed /home/mike/turtlebot3_ws/build/turtlebot3_example
+[2.715s] running install_data

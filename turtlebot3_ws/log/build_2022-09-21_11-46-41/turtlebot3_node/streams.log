@@ -1,0 +1,4 @@
+[0.063s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[0.483s] [ 85%] Built target turtlebot3_node_lib
+[0.485s] [100%] Built target turtlebot3_ros
+[0.496s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4

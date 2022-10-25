@@ -1,0 +1,5 @@
+[0.345s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_fake_node -- -j4 -l4
+[0.386s] CMake Error: The source directory "/home/mike/turtlebot3_ws/turtlebot3_simulations/turtlebot3_fake_node" does not exist.
+[0.387s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.388s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.414s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_fake_node' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_fake_node -- -j4 -l4

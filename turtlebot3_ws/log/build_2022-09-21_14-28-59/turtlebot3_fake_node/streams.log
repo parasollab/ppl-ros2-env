@@ -1,0 +1,53 @@
+[0.359s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_fake_node -- -j4 -l4
+[0.405s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.441s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.541s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.547s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[0.596s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.604s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.859s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.039s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[1.175s] -- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)
+[1.265s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.270s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.309s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.586s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[1.761s] -- Found tf2: 0.17.4 (/opt/ros/galactic/share/tf2/cmake)
+[1.794s] -- Found tf2_msgs: 0.17.4 (/opt/ros/galactic/share/tf2_msgs/cmake)
+[2.307s] -- Found turtlebot3_msgs: 2.2.2 (/opt/ros/galactic/share/turtlebot3_msgs/cmake)
+[2.736s] -- Configuring done
+[2.764s] -- Generating done
+[2.771s] -- Build files have been written to: /home/mike/turtlebot3_ws/build/turtlebot3_fake_node
+[2.825s] [35m[1mScanning dependencies of target turtlebot3_fake_node[0m
+[2.888s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_fake_node.dir/src/turtlebot3_fake_node.cpp.o[0m
+[23.705s] [100%] [32m[1mLinking CXX executable turtlebot3_fake_node[0m
+[25.645s] [100%] Built target turtlebot3_fake_node
+[25.668s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_fake_node -- -j4 -l4
+[25.977s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_fake_node
+[26.173s] -- Install configuration: ""
+[26.203s] -- Execute custom install script
+[26.253s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[26.255s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[26.258s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[26.258s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[26.258s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[26.258s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[26.261s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[26.262s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[26.270s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[26.273s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[26.273s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[26.273s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[26.274s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[26.275s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[26.275s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[26.276s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[26.279s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[26.280s] -- Symlinking: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[26.311s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[26.312s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[26.313s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[26.316s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[26.316s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[26.317s] -- Up-to-date symlink: /home/mike/turtlebot3_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[26.326s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_fake_node

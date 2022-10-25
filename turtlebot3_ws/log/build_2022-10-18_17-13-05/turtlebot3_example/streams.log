@@ -1,0 +1,2 @@
+[2.304s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_example': PYTHONPATH=/home/mike/turtlebot3_ws/install/turtlebot3_example/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/mike/turtlebot3_ws/install/turtlebot3_example --uninstall --editable --build-directory /home/mike/turtlebot3_ws/build/turtlebot3_example/build
+[2.778s] running develop

@@ -1,0 +1,1 @@
+Invoking command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs': /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/costmap_converter/costmap_converter_msgs -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/costmap_converter_msgs

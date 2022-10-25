@@ -1,0 +1,32 @@
+-- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found costmap_converter: 0.1.2 (/home/mike/turtlebot3_ws/install/costmap_converter/share/costmap_converter/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found dwb_critics: 1.0.12 (/opt/ros/galactic/share/dwb_critics/cmake)
+-- Found teb_msgs: 0.0.1 (/home/mike/turtlebot3_ws/install/teb_msgs/share/teb_msgs/cmake)
+-- Found tf2_eigen: 0.17.4 (/opt/ros/galactic/share/tf2_eigen/cmake)
+-- System: Linux-5.15.0-50-generic
+-- /opt/ros/galactic/share/tinyxml2_vendor/cmake/Modules;/opt/ros/galactic/share/eigen3_cmake_module/cmake/Modules;/opt/ros/galactic/share/fastrtps_cmake_module/cmake/Modules;/home/mike/turtlebot3_ws/src/turtlebot3/teb_local_planner/teb_local_planner/cmake_modules
+-- Found SuiteSparse
+-- Searching for g2o ...
+-- Found g2o headers in: /usr/local/include/g2o
+-- Found libg2o: /usr/local/lib/libg2o_csparse_extension.so;/usr/local/lib/libg2o_core.so;/usr/local/lib/libg2o_stuff.so;/usr/local/lib/libg2o_types_slam2d.so;/usr/local/lib/libg2o_types_slam3d.so;/usr/local/lib/libg2o_solver_cholmod.so;/usr/local/lib/libg2o_solver_pcg.so;/usr/local/lib/libg2o_solver_csparse.so;/usr/local/lib/libg2o_incremental.so
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0")  
+-- Found ament_cmake_gtest: 1.1.5 (/opt/ros/galactic/share/ament_cmake_gtest/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mike/turtlebot3_ws/build/teb_local_planner
+[35m[1mScanning dependencies of target teb_local_planner[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/optimal_planner.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/visualization.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/timed_elastic_band.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/obstacles.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/recovery_behaviors.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/teb_config.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/homotopy_class_planner.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/teb_local_planner.dir/src/teb_local_planner_ros.cpp.o[0m

@@ -1,0 +1,79 @@
+[0.057s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/turtlebot3_node
+[0.080s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.121s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.122s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.279s] -- Found dynamixel_sdk: 3.7.40 (/opt/ros/galactic/share/dynamixel_sdk/cmake)
+[0.285s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[0.338s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.348s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.510s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.561s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.710s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.918s] -- Found message_filters: 3.2.6 (/opt/ros/galactic/share/message_filters/cmake)
+[1.056s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[1.063s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[1.111s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.114s] -- Looking for pthread.h
+[1.263s] -- Looking for pthread.h - found
+[1.263s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.388s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.389s] -- Looking for pthread_create in pthreads
+[1.488s] -- Looking for pthread_create in pthreads - not found
+[1.489s] -- Looking for pthread_create in pthread
+[1.618s] -- Looking for pthread_create in pthread - found
+[1.618s] -- Found Threads: TRUE  
+[1.925s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[2.084s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[2.231s] -- Found std_srvs: 2.2.4 (/opt/ros/galactic/share/std_srvs/cmake)
+[2.255s] -- Found tf2: 0.17.4 (/opt/ros/galactic/share/tf2/cmake)
+[2.278s] -- Found tf2_ros: 0.17.4 (/opt/ros/galactic/share/tf2_ros/cmake)
+[3.021s] -- Found turtlebot3_msgs: 2.2.2 (/opt/ros/galactic/share/turtlebot3_msgs/cmake)
+[3.368s] -- Configuring done
+[3.433s] -- Generating done
+[3.440s] -- Build files have been written to: /home/mike/turtlebot3_ws/build/turtlebot3_node
+[3.457s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/turtlebot3_node -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/turtlebot3_node
+[3.462s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[3.633s] [35m[1mScanning dependencies of target turtlebot3_node_lib[0m
+[4.313s] [  7%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/motor_power.cpp.o[0m
+[4.314s] [ 14%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/sound.cpp.o[0m
+[4.325s] [ 21%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/devices/reset.cpp.o[0m
+[4.339s] [ 28%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/diff_drive_controller.cpp.o[0m
+[14.581s] [ 35%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/dynamixel_sdk_wrapper.cpp.o[0m
+[14.702s] [ 42%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/odometry.cpp.o[0m
+[15.547s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/turtlebot3.cpp.o[0m
+[16.153s] [ 57%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/battery_state.cpp.o[0m
+[17.573s] [ 64%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/imu.cpp.o[0m
+[66.893s] [ 71%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/sensor_state.cpp.o[0m
+[73.399s] [ 78%] [32mBuilding CXX object CMakeFiles/turtlebot3_node_lib.dir/src/sensors/joint_state.cpp.o[0m
+[79.538s] [ 85%] [32m[1mLinking CXX static library libturtlebot3_node_lib.a[0m
+[80.553s] [ 85%] Built target turtlebot3_node_lib
+[80.576s] [35m[1mScanning dependencies of target turtlebot3_ros[0m
+[80.676s] [ 92%] [32mBuilding CXX object CMakeFiles/turtlebot3_ros.dir/src/node_main.cpp.o[0m
+[85.086s] [100%] [32m[1mLinking CXX executable turtlebot3_ros[0m
+[87.375s] [100%] Built target turtlebot3_ros
+[87.392s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+[87.454s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_node
+[87.470s] -- Install configuration: ""
+[87.470s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param
+[87.470s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle.yaml
+[87.471s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/waffle_pi.yaml
+[87.471s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/param/burger.yaml
+[87.472s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros
+[87.486s] -- Set runtime path of "/home/mike/turtlebot3_ws/install/turtlebot3_node/lib/turtlebot3_node/turtlebot3_ros" to ""
+[87.487s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node
+[87.488s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node
+[87.488s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.sh
+[87.488s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/ament_prefix_path.dsv
+[87.489s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.sh
+[87.489s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/environment/path.dsv
+[87.489s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.bash
+[87.489s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.sh
+[87.490s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.zsh
+[87.490s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/local_setup.dsv
+[87.490s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/package.dsv
+[87.491s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/ament_index/resource_index/packages/turtlebot3_node
+[87.492s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[87.492s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig.cmake
+[87.492s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake/turtlebot3_nodeConfig-version.cmake
+[87.493s] -- Installing: /home/mike/turtlebot3_ws/install/turtlebot3_node/share/turtlebot3_node/package.xml
+[87.500s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_node

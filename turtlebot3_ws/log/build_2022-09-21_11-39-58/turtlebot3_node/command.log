@@ -1,0 +1,3 @@
+Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
+Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/turtlebot3_node

@@ -1,0 +1,4 @@
+Invoking command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs': /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/costmap_converter_msgs -- -j4 -l4
+Invoked command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs' returned '0': /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/costmap_converter_msgs -- -j4 -l4
+Invoking command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs': /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/costmap_converter_msgs
+Invoked command in '/home/mike/turtlebot3_ws/build/costmap_converter_msgs' returned '0': /usr/bin/cmake --install /home/mike/turtlebot3_ws/build/costmap_converter_msgs

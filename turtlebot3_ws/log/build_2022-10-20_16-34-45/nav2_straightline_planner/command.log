@@ -1,0 +1,2 @@
+Invoking command in '/home/mike/turtlebot3_ws/build/nav2_straightline_planner': /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/nav2_straightline_planner -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/nav2_straightline_planner
+Invoked command in '/home/mike/turtlebot3_ws/build/nav2_straightline_planner' returned '1': /usr/bin/cmake /home/mike/turtlebot3_ws/src/turtlebot3/nav2_straightline_planner -DCMAKE_INSTALL_PREFIX=/home/mike/turtlebot3_ws/install/nav2_straightline_planner
