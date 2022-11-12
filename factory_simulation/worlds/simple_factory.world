@@ -91,6 +91,38 @@
       </include>
     </model>
 
+    <model name="wall1">
+      <static>1</static>
+      <include>
+        <uri>model://wall</uri>
+        <pose> 12 0 0 0 0 1.57 </pose>        
+      </include>
+    </model>
+
+    <model name="wall2">
+      <static>1</static>
+      <include>
+        <uri>model://wall</uri>
+        <pose> -12 0 0 0 0 1.57 </pose>        
+      </include>
+    </model>
+
+    <model name="wall3">
+      <static>1</static>
+      <include>
+        <uri>model://wall</uri>
+        <pose> 0 12 0 0 0 0 </pose>        
+      </include>
+    </model>
+
+    <model name="wall4">
+      <static>1</static>
+      <include>
+        <uri>model://wall</uri>
+        <pose> 0 -12 0 0 0 0 </pose>        
+      </include>
+    </model>
+
   </world>
 </sdf>
 
