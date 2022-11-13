@@ -29,7 +29,7 @@ link_directories(
   ${GAZEBO_INCLUDE_DIRS}
 )
 
-install(DIRECTORY launch models worlds
+install(DIRECTORY launch models worlds param map
   DESTINATION share/${PROJECT_NAME}/
 )
 
