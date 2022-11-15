@@ -188,8 +188,8 @@
     </TaskDecomposers>
 
     <TaskAllocators>
-      <GreedyAllocator label="GreedyAlloc" clearAfterInitializing="true" debug = "true"/>
-      <SmartAllocator label="SmartAllocator" clearAfterInitializing="true" debug = "true"/>
+      <GreedyAllocator label="GreedyAlloc" reset="true" debug="true"/>
+      <SmartAllocator label="SmartAllocator" reset="true" debug="true"/>
     </TaskAllocators>
 
     <StateGraphs>
