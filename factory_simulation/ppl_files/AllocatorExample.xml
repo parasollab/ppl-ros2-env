@@ -24,15 +24,18 @@
         <Member label="robot1"/>
         <!--Member label="robot2"/-->
         <!--StepFunction type="defaultcoordinator" debug="true"/-->
-        <StepFunction type="factoryallocation" debug="true">
-          <TaskPoint label="ws0" location="4 3 0" topic="estimated_time_to_empty"/>
+        <StepFunction type="factoryallocation" depot="8 0 0" debug="true">
+          <TaskPoint label="ws0" location="4 3 0" threshold="20" topic="estimated_time_to_empty"/>
+          <TaskPoint label="ws1" location="4 -3 0" threshold="20" topic="estimated_time_to_empty"/>
+          <TaskPoint label="ws2" location="-4 3 0" threshold="20" topic="estimated_time_to_empty"/>
+          <TaskPoint label="ws3" location="-4 -3 0" threshold="20" topic="estimated_time_to_empty"/>
         </StepFunction>
       </Agent>
     </Robot>
 
     <Task label="startLocation" robot="robot1">
       <StartConstraints>
-        <CSpaceConstraint point="0 3 0 0 0 0"/>
+        <CSpaceConstraint point="0 -.5 0"/>
       </StartConstraints>
     </Task>
 
@@ -44,82 +47,9 @@
 
     <Task label="coordinatorTask" robot="coordinator">
       <StartConstraints>
-        <CSpaceConstraint point="0 0 0 0 0 0"/>
+        <CSpaceConstraint point="0 0 0"/>
       </StartConstraints>
     </Task>
-
-    <Decomposition label="main" taskLabel="first" coordinator="coordinator">
-      <SemanticTask label="first" fixedAllocation="false">
-        <Task label="query1" robot="robot1">
-          <StartConstraints>
-            <CSpaceConstraint point="0 5 0 0 0 0"/>
-          </StartConstraints>
-
-          <GoalConstraints>
-            <CSpaceConstraint point="0 -5 0 0.2 0.8 0.5"/>
-          </GoalConstraints>
-        </Task>
-      </SemanticTask>
-      <SemanticTask label="second" fixedAllocation="false">
-        <Task label="query2" robot="robot1">
-          <StartConstraints>
-            <CSpaceConstraint point="0 7 0 0 0 0"/>
-          </StartConstraints>
-
-          <GoalConstraints>
-            <CSpaceConstraint point="0 -3 0 0.2 0.8 0.5"/>
-          </GoalConstraints>
-        </Task>
-      </SemanticTask>
-    </Decomposition>
-    <Decomposition label="main" taskLabel="first" coordinator="coordinator">
-      <SemanticTask label="first" fixedAllocation="false">
-        <Task label="query1" robot="robot1">
-          <StartConstraints>
-            <CSpaceConstraint point="0 5 0 0 0 0"/>
-          </StartConstraints>
-
-          <GoalConstraints>
-            <CSpaceConstraint point="0 -5 0 0.2 0.8 0.5"/>
-          </GoalConstraints>
-        </Task>
-      </SemanticTask>
-      <SemanticTask label="second" fixedAllocation="false">
-        <Task label="query2" robot="robot1">
-          <StartConstraints>
-            <CSpaceConstraint point="0 7 0 0 0 0"/>
-          </StartConstraints>
-
-          <GoalConstraints>
-            <CSpaceConstraint point="0 -3 0 0.2 0.8 0.5"/>
-          </GoalConstraints>
-        </Task>
-      </SemanticTask>
-    </Decomposition>
-    <Decomposition label="main" taskLabel="first" coordinator="coordinator">
-      <SemanticTask label="first" fixedAllocation="false">
-        <Task label="query1" robot="robot1">
-          <StartConstraints>
-            <CSpaceConstraint point="0 5 0 0 0 0"/>
-          </StartConstraints>
-
-          <GoalConstraints>
-            <CSpaceConstraint point="0 -5 0 0.2 0.8 0.5"/>
-          </GoalConstraints>
-        </Task>
-      </SemanticTask>
-      <SemanticTask label="second" fixedAllocation="false">
-        <Task label="query2" robot="robot1">
-          <StartConstraints>
-            <CSpaceConstraint point="0 7 0 0 0 0"/>
-          </StartConstraints>
-
-          <GoalConstraints>
-            <CSpaceConstraint point="0 -3 0 0.2 0.8 0.5"/>
-          </GoalConstraints>
-        </Task>
-      </SemanticTask>
-    </Decomposition>
 
   </Problem>
 
@@ -258,8 +188,8 @@
     </TaskDecomposers>
 
     <TaskAllocators>
-      <GreedyAllocator label="GreedyAlloc" debug = "true"/>
-      <SmartAllocator label="SmartAllocator" debug = "true"/>
+      <GreedyAllocator label="GreedyAlloc" clearAfterInitializing="true" debug = "true"/>
+      <SmartAllocator label="SmartAllocator" clearAfterInitializing="true" debug = "true"/>
     </TaskAllocators>
 
     <StateGraphs>
