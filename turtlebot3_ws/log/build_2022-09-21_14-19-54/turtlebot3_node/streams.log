@@ -1,4 +1,0 @@
-[0.061s] Invoking command in '/home/mike/turtlebot3_ws/build/turtlebot3_node': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4
-[0.378s] [ 85%] Built target turtlebot3_node_lib
-[0.379s] [100%] Built target turtlebot3_ros
-[0.386s] Invoked command in '/home/mike/turtlebot3_ws/build/turtlebot3_node' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/mike/turtlebot3_ws/build/turtlebot3_node -- -j4 -l4

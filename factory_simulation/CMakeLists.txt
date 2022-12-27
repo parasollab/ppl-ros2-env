@@ -7,6 +7,9 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -39,5 +42,13 @@ install(DIRECTORY include/
 
 ament_export_include_directories(include)
 ament_export_dependencies(gazebo_ros_pkgs)
+
+ament_python_install_package(${PROJECT_NAME})
+
+install(
+  PROGRAMS
+    factory_simulation/spawn_turtlebot3.py
+    DESTINATION lib/${PROJECT_NAME}/
+)
 
 ament_package()

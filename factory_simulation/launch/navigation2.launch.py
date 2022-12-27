@@ -36,7 +36,7 @@ def generate_launch_description():
             'map',
             'map.yaml'))
 
-    param_file_name = TURTLEBOT3_MODEL + '.yaml'
+    param_file_name = TURTLEBOT3_MODEL + '1.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
         default=os.path.join(
@@ -51,6 +51,8 @@ def generate_launch_description():
     #    'rviz',
     #    'nav2_default_view.rviz')
 
+    namespace = LaunchConfiguration('namespace',default='')
+    use_namespace = LaunchConfiguration('use_namespace',default='false')
 
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -68,12 +70,26 @@ def generate_launch_description():
             default_value='false',
             description='Use simulation (Gazebo) clock if true'),
 
+        DeclareLaunchArgument(
+            'namespace',
+            default_value=namespace,
+            description='Namespace for the navigation stack'),
+
+        DeclareLaunchArgument(
+            'use_namespace',
+            default_value=use_namespace,
+            description='Flag to toggle the use of a namespace'),
+
+
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([nav2_launch_file_dir, '/bringup_launch.py']),
             launch_arguments={
                 'map': map_dir,
                 'use_sim_time': use_sim_time,
-                'params_file': param_dir}.items(),
+                'params_file': param_dir,
+                'namespace': namespace,
+                'use_namespace': use_namespace
+            }.items(),
         ),
 
         #Node(

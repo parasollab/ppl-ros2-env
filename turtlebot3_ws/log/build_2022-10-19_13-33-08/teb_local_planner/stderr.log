@@ -1,6 +1,0 @@
-CMake Error at cmake_modules/FindG2O.cmake:85 (message):
-  Could not find libg2o!
-Call Stack (most recent call first):
-  CMakeLists.txt:45 (find_package)
-
-

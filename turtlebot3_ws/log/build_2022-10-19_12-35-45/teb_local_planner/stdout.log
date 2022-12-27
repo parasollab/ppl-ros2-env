@@ -1,5 +1,0 @@
--- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
--- Using PYTHON_EXECUTABLE: /usr/bin/python3
--- Configuring incomplete, errors occurred!
-See also "/home/mike/turtlebot3_ws/build/teb_local_planner/CMakeFiles/CMakeOutput.log".
-See also "/home/mike/turtlebot3_ws/build/teb_local_planner/CMakeFiles/CMakeError.log".
