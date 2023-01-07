@@ -14,8 +14,8 @@ def generate_launch_description():
   launch_file_dir = os.path.join(get_package_share_directory('factory_simulation'), 'launch')
   
   robots = [
-        {'name':'robot1','x_pose':0.0, 'y_pose':0.5, 'z_pose':0.01}
-        #{'name':'robot2','x_pose':0.0, 'y_pose':-0.5, 'z_pose':0.01}
+        {'name':'robot1','x_pose':0.0, 'y_pose':0.5, 'z_pose':0.01},
+        {'name':'robot2','x_pose':2.0, 'y_pose':0.5, 'z_pose':0.01}
   ]
 
   use_sim_time = LaunchConfiguration('use_sim_time', default='true')
