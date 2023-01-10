@@ -38,8 +38,10 @@ def generate_launch_description():
     # Launch configuration variables specific to simulation
     x_pose = LaunchConfiguration('x_pose', default='0.0')
     y_pose = LaunchConfiguration('y_pose', default='0.0')
+    Y_rot = LaunchConfiguration('Y_rot', default='0.0')
     robot_name = LaunchConfiguration('robot_name', default='tb1')
 
+    """
     # Directly edit the sdf to remap tf to namespace/tf for the diff drive
     tree = ET.parse(sdf_path)
     root = tree.getroot()
@@ -56,16 +58,23 @@ def generate_launch_description():
     tmp_xml = '/tmp/model_' + ''.join(random.choices(string.ascii_lowercase,k=5)) + '.sdf'
     tree.write(tmp_xml)
 
+    """
+
     remappings = [('/tf','tf'),('/tf_static','tf_static')]
 
     # Declare the launch arguments
     declare_x_position_cmd = DeclareLaunchArgument(
         'x_pose', default_value='0.0',
-        description='Specify namespace of the robot')
+        description='Specify initial x pose of the robot')
 
     declare_y_position_cmd = DeclareLaunchArgument(
         'y_pose', default_value='0.0',
-        description='Specify namespace of the robot')
+        description='Specify initial y pose of the robot')
+
+    declare_Y_rotation_cmd = DeclareLaunchArgument(
+        'Y_rot', default_value='0.0',
+        description='Specify initial yaw value of the robot')
+
 
     declare_robot_name_cmd = DeclareLaunchArgument(
         'robot_name', default_value='tb1',
@@ -76,11 +85,12 @@ def generate_launch_description():
         executable='spawn_entity.py',
         arguments=[
             '-entity', robot_name,
-            '-file', tmp_xml,
-            '-robot_namespace',robot_name,
+            '-file', sdf_path,
+            #'-robot_namespace',robot_name,
             '-x', x_pose,
             '-y', y_pose,
-            '-z', '0.01'
+            '-z', '0.01',
+            '-Y', Y_rot
         ],
         output='screen',
         remappings=remappings
