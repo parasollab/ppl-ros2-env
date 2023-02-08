@@ -33,7 +33,7 @@ def main(args=None):
     parser = argparse.ArgumentParser(description='Spawn Robot into Gazebo with Nav2')
     parser.add_argument('-n', '--robot_name', type=str, default='robot',
                         help='Name of the robot to spawn')
-    parser.add_argument('-ns', '--robot_namespace', type=str, default='robot',
+    parser.add_argument('-ns', '--robot_namespace', type=str, default='',
                         help='ROS namespace to apply to the tf and plugins')
     parser.add_argument('-x', type=float, default=0,
                         help='the x component of the initial position [meters]')
