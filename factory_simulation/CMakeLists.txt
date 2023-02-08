@@ -28,7 +28,6 @@ if(BUILD_TESTING)
 endif()
 
 link_directories(
-  include
   ${GAZEBO_INCLUDE_DIRS}
 )
 
@@ -36,11 +35,6 @@ install(DIRECTORY launch models worlds param map
   DESTINATION share/${PROJECT_NAME}/
 )
 
-install(DIRECTORY include/
-  DESTINATION include/
-)
-
-ament_export_include_directories(include)
 ament_export_dependencies(gazebo_ros_pkgs)
 
 ament_python_install_package(${PROJECT_NAME})
