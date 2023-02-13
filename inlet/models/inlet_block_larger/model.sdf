@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <model name="long_wall">
+  <model name="block">
     <static>true</static>
     <link name="link">
       <collision name="collision">
         <geometry>
           <mesh>
-            <uri>model://long_wall/meshes/long_wall.obj</uri>
+            <uri>model://inlet_block_larger/meshes/inlet_block.obj</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
@@ -22,7 +22,7 @@
       <visual name="visual">
         <geometry>
           <mesh>
-            <uri>model://long_wall/meshes/long_wall.obj</uri>
+            <uri>model://inlet_block_larger/meshes/inlet_block.obj</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>
