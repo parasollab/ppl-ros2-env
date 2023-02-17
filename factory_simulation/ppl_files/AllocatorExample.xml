@@ -14,14 +14,14 @@
         waypointThreshold=".05"/-->
     </Robot>
 
-    <!--Robot label="robot2" filename="3D/boxy.robot">
-      <Agent type="pathfollowing" waypointDm="minkowski"
-        waypointThreshold=".05"/>
-    </Robot-->
+    <Robot label="robot2" filename="boxy.robot">
+      <Agent type="planning"/>
+    </Robot>
 
     <Robot label="coordinator" virtual="true" filename="boxy.robot" manipulator="false">
       <Agent type="coordinator" dmLabel="minkowski" debug="true">
         <Member label="robot1"/>
+        <Member label="robot2"/>
         <!--Member label="robot2"/-->
         <!--StepFunction type="defaultcoordinator" debug="true"/-->
         <StepFunction type="factoryallocation" depot="8 0 0" debug="true">
@@ -35,15 +35,15 @@
 
     <Task label="startLocation" robot="robot1">
       <StartConstraints>
-        <CSpaceConstraint point="0 -.5 0"/>
+        <CSpaceConstraint point="0 .5 0"/>
       </StartConstraints>
     </Task>
 
-    <!--Task label="startLocation" robot="robot2">
+    <Task label="startLocation" robot="robot2">
       <StartConstraints>
-        <CSpaceConstraint point="0 0 0 0 0 0"/>
+        <CSpaceConstraint point="2 .5 0 0 0 0"/>
       </StartConstraints>
-    </Task-->
+    </Task>
 
     <Task label="coordinatorTask" robot="coordinator">
       <StartConstraints>
