@@ -1,4 +1,4 @@
-image: ./inlet_tiny.pgm
+image: inlet_tiny.pgm
 resolution: 0.050000
 origin: [-0.75,-0.25, 0.000000]
 negate: 0
