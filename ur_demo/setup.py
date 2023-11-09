@@ -56,6 +56,7 @@ Demo nodes for showing and testing functionalities of the ros2_control framework
                 ur_demo.publisher_gpg:main",
             "pick_and_place = \
                 ur_demo.pick_and_place:main",
+            "handoff_demo = ur_demo.handoff_demo:main",
         ],
     },
 )
