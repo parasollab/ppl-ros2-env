@@ -390,7 +390,7 @@ class Handoff(Node):
 
 
         # # turtlebot vars
-        self.use_turtlebot = True
+        self.use_turtlebot = False
         if self.use_turtlebot:
             self.tb_goal_pub = self.create_publisher(PoseStamped, '/robot1/task_queue', 1)
             self.tb_task_complete_callback = self.create_subscription(Bool, '/robot1/task_complete', self.tb_task_complete_callback, 1)

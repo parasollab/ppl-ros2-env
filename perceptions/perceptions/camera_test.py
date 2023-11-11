@@ -13,7 +13,6 @@ import cv2
 import yaml
 import os
 import numpy as np
-from yolov5_ros2.cv_tool import px2xy
 from cv2 import aruco
 
 import pyrealsense2 as rs2
@@ -21,7 +20,7 @@ import pyrealsense2 as rs2
 
 # Get the ROS distribution version and set the shared directory for arucoV5 configuration files.
 ros_distribution = os.environ.get("ROS_DISTRO")
-package_share_directory = get_package_share_directory('yolov5_ros2')
+package_share_directory = get_package_share_directory('perceptions')
 
 # Create a ROS 2 Node class arucoV5Ros2.
 class arucoV5Ros2(Node):

@@ -58,7 +58,7 @@ def generate_launch_description():
 
 
             Node(
-                package="yolov5_ros2",
+                package="perceptions",
                 executable="camera_test",
                 name="camera_test",
                 parameters=[{'computing_device': LaunchConfiguration('computing_device'), 

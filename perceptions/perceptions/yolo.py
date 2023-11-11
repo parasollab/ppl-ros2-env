@@ -1,7 +1,6 @@
 from math import frexp
 from traceback import print_tb
 from torch import imag
-# from yolo import YOLOv5
 import rclpy
 from rclpy.node import Node
 from ament_index_python.packages import get_package_share_directory
@@ -12,7 +11,6 @@ from std_msgs.msg import Bool
 from cv_bridge import CvBridge
 import cv2
 import yaml
-from yolov5_ros2.cv_tool import px2xy
 import os
 import numpy as np
 import pyrealsense2 as rs2
@@ -22,12 +20,12 @@ from ultralytics import YOLO
 
 # Get the ROS distribution version and set the shared directory for YoloV5 configuration files.
 ros_distribution = os.environ.get("ROS_DISTRO")
-package_share_directory = get_package_share_directory('yolov5_ros2')
+package_share_directory = get_package_share_directory('perceptions')
 
-# Create a ROS 2 Node class YoloV5Ros2.
-class YoloV5Ros2(Node):
+# Create a ROS 2 Node class Yolo.
+class Yolo(Node):
     def __init__(self):
-        super().__init__('yolov5_ros2')
+        super().__init__('yolo')
         # self.get_logger().info(f"Current ROS 2 distribution: {ros_distribution}")
 
         # Declare ROS parameters.
@@ -299,9 +297,9 @@ class YoloV5Ros2(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    yoloV5 = YoloV5Ros2()
+    yolo = Yolo()
 
-    rclpy.spin(yoloV5)
+    rclpy.spin(yolo)
     publisher_joint_trajectory.destroy_node()
     rclpy.shutdown()
 

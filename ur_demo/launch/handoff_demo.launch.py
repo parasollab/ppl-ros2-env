@@ -77,9 +77,9 @@ def generate_launch_description():
             # ),
 
             Node(
-                package="yolov5_ros2",
-                executable="yolo_detect_2d",
-                name="yolo_detect_2d",
+                package="perceptions",
+                executable="yolo",
+                name="yolo",
                 parameters=[{'computing_device': LaunchConfiguration('computing_device'), 
                             'yolo_image_topic': LaunchConfiguration('yolo_image_topic'), 
                             'yolo_depth_topic': LaunchConfiguration('yolo_depth_topic'), 
@@ -88,7 +88,7 @@ def generate_launch_description():
             ),
 
             Node(
-                package="yolov5_ros2",
+                package="perceptions",
                 executable="aruco_detect",
                 name="aruco_detect",
                 parameters=[{'computing_device': LaunchConfiguration('computing_device'), 
