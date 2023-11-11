@@ -55,19 +55,19 @@ class arucoV5Ros2(Node):
 
         # 2. Create publishers.
         self.aruco_result_pub = self.create_publisher(
-            Detection2DArray, "detection_result", 10)
+            Detection2DArray, "tag_detection_result", 1)
         self.result_msg = Detection2DArray()
 
-        self.result_img_pub = self.create_publisher(Image, "result_img", 10)
+        self.result_img_pub = self.create_publisher(Image, "tag_result_img", 1)
 
         # 3. Create an image subscriber (subscribe to depth information for 3D cameras, load camera info for 2D cameras).
         image_topic = self.get_parameter('aruco_image_topic').value
         self.image_sub = self.create_subscription(
-            Image, image_topic, self.image_callback, 10)
+            Image, image_topic, self.image_callback, 1)
 
         depth_topic = self.get_parameter('aruco_depth_topic').value
         self.depth_sub = self.create_subscription(
-            Image, depth_topic, self.depth_callback, 10)
+            Image, depth_topic, self.depth_callback, 1)
 
 
         camera_info_topic = self.get_parameter('aruco_camera_info_topic').value
@@ -75,9 +75,9 @@ class arucoV5Ros2(Node):
             CameraInfo, camera_info_topic, self.camera_info_callback, 1)
 
 
-        detection_request_topic = '/detection_request'
+        detection_request_topic = '/tag_detection_request'
         self.detection_request_sub = self.create_subscription(
-            Bool, detection_request_topic, self.detection_request_callback, 10)
+            Bool, detection_request_topic, self.detection_request_callback, 1)
 
         # Get camera information.
         # with open(self.get_parameter('aruco_camera_info_file').value) as f:
@@ -141,7 +141,7 @@ class arucoV5Ros2(Node):
             # mask = np.zeros(image.shape[:2], dtype=np.uint8)
             # mask[300::, 300:920] = 255
             # image = cv2.bitwise_and(image, image, mask=mask)
-
+            self.get_logger().info("detection requested")
 
             self.result_msg.detections.clear()
             self.result_msg.header.frame_id = "camera"
@@ -156,6 +156,7 @@ class arucoV5Ros2(Node):
             image = cv2.aruco.drawDetectedMarkers(image.copy(), corners, ids)
 
             if ids is None:
+                self.get_logger().info("not detected")
                 ids = []
 
                 
@@ -194,6 +195,7 @@ class arucoV5Ros2(Node):
                 detection2d.results.append(obj_pose)
                 self.result_msg.detections.append(detection2d)
 
+                self.get_logger().info(f"found tag: {world_x}, {world_y}, {world_z}")
                 if self.show_result or self.pub_result_img:
                     cv2.circle(image, (360,590), radius=10, color=(0, 0, 255), thickness=4)
                     cv2.circle(image, (810,580), radius=10, color=(0, 0, 255), thickness=4)
@@ -216,6 +218,8 @@ class arucoV5Ros2(Node):
 
             if len(ids) > 0:
                 self.aruco_result_pub.publish(self.result_msg)
+                self.result_msg = Detection2DArray()
+
         else:
             image = self.bridge.imgmsg_to_cv2(msg)
             if self.pub_result_img:

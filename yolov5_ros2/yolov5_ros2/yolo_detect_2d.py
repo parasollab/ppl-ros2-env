@@ -18,7 +18,7 @@ import numpy as np
 import pyrealsense2 as rs2
 
 from ultralytics import YOLO
-# model = YOLO('yolov5n.pt')  # load a pretrained yolov5n detection model
+# model = YOLO('yolov8n.pt')  # load a pretrained YOLOv8n detection model
 
 # Get the ROS distribution version and set the shared directory for YoloV5 configuration files.
 ros_distribution = os.environ.get("ROS_DISTRO")
@@ -62,7 +62,7 @@ class YoloV5Ros2(Node):
         model_path = package_share_directory + "/config/" + self.get_parameter('yolo_model').value + ".pt"
         device = self.get_parameter('computing_device').value
         # self.yolo = YOLOv5(model_path=model_path, device=device)
-        self.yolo = YOLO('yolov5m.pt')
+        self.yolo = YOLO('yolov8m.pt')
 
         # 2. Create publishers.
         self.yolo_result_pub = self.create_publisher(

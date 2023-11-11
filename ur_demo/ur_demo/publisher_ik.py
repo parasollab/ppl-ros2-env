@@ -179,6 +179,8 @@ class PublisherIK(Node):
         super().__init__('publisher_ik')
         self.joint_state_sub = self.create_subscription(
                 Float32MultiArray, "/ee_position", self.ee_position_callback, 1)
+        self.joint_handoff_state_sub = self.create_subscription(
+                Float32MultiArray, "/ee_handoff_position", self.ee_handoff_position_callback, 1)
         self.publisher_ = self.create_publisher(Float32MultiArray, '/ik_joint_values', 1)
     
         # timer_period = 0.1  # seconds
@@ -191,17 +193,35 @@ class PublisherIK(Node):
             T = [msg.data[i] for i in range(len(msg.data))]
             num_solutions, q_sols = inverse(T)
             if num_solutions > 0:
-                self.q_sol = q_sols[1]
+                self.q_sol = q_sols[0]
 
                 msg = Float32MultiArray()
                 msg.data = self.q_sol
                 self.publisher_.publish(msg)
 
+    def ee_handoff_position_callback(self, msg):
+        if msg.data:
+            T = [msg.data[i] for i in range(len(msg.data))]
+            num_solutions, q_sols = inverse(T)
+            
+            if num_solutions > 0:
+                l = []
+                # q_sols = [(q_sol[1] < 0.36 and q_sol[1] > -3.60) for q_sol in q_sols]
+                for q_sol in q_sols:
+                    if q_sol[1] < 0.36 and q_sol[1] > -3.60:
+                        l.append(q_sol)
+                
+                if len(l) > 0:
+                    self.q_sol = l[0]
+                    self.get_logger().info(f"{self.q_sol}")
+                    msg = Float32MultiArray()
+                    msg.data = l[0]
+                    self.publisher_.publish(msg)
+
+            # self.get_logger().info(f"ik solution: {self.q_sol}")
     # def timer_callback(self):
     #     msg = Float32MultiArray()
-
     #     msg.data = self.q_sol
-
     #     self.publisher_.publish(msg)
 
 

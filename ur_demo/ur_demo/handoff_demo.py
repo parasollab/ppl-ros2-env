@@ -321,16 +321,17 @@ class RobotiqGripper:
 
 
 
-class HandoffDemo(Node):
+class Handoff(Node):
     
     def __init__(self):
-        super().__init__('handoff_demo')
+        super().__init__('handoff')
 
-        # UR variables
         self.publisher_ur_command = self.create_publisher(
                 Float32MultiArray, "/ur_joint_command", 1)
         self.publisher_ee_position = self.create_publisher(
                     Float32MultiArray, "/ee_position", 1)
+        self.publisher_ee_handoff_position = self.create_publisher(
+                    Float32MultiArray, "/ee_handoff_position", 1)
 
         self.subscriber_joint_values = self.create_subscription(
                     Float32MultiArray, "/ik_joint_values", self.ik_joint_callback, 1)
@@ -341,22 +342,31 @@ class HandoffDemo(Node):
                     Bool, "/detection_request", 1)
         self.subscriber_object_pixel_position = self.create_subscription(
                     Detection2DArray, "/detection_result", self.detection_result_callback, 1)
+
+        self.publisher_tag_detection_request = self.create_publisher(
+                    Bool, "/tag_detection_request", 1)
+        self.subscriber_tag_pixel_position = self.create_subscription(
+                    Detection2DArray, "/tag_detection_result", self.tag_detection_result_callback, 1)
+
         self.subscriber_camera_info = self.create_subscription(
                     CameraInfo, "/camera/camera_info", self.camera_info_callback, 1)
+
 
         self.subscriber_camera_info
         self.subscriber_joint_values
         self.subscriber_joint_state
         self.subscriber_object_pixel_position
+        self.subscriber_tag_pixel_position
 
         self.dXYZ = {}
         self.objCnt = {}
-        
+        self.tag_dXYZ = {}
+
         self.grasp_offset = 0.21
         self.backoff_offset = 0.35
         self.hover_offset = 0.5
 
-        self.ee_goal = [0., 0., -1., -0.3,       0., -1., 0., 0.,       -1., 0., 0., self.hover_offset]
+        self.ee_goal = [0., 0., 1., 0.3,       0., 1., 0., 0.,       -1., 0., 0., self.hover_offset]
         self.prev_ee_goal = []
         self.ee_state = []
 
@@ -376,19 +386,18 @@ class HandoffDemo(Node):
         self.image_width = 0
 
         self.object_detected = False
+        self.tag_detected = False
 
-        ####################################
-        # Turtlebot variables
-        self.tb_goal_pub = self.create_publisher(PoseStamped, '/robot1/task_queue', 1)
 
-        self.tb_task_complete = self.create_subscription(Bool, '/robot1/task_complete', self.tb_task_complete_callback, 1)
-        self.task_complete = False
-        ####################################
+        # # turtlebot vars
+        self.use_turtlebot = True
+        if self.use_turtlebot:
+            self.tb_goal_pub = self.create_publisher(PoseStamped, '/robot1/task_queue', 1)
+            self.tb_task_complete_callback = self.create_subscription(Bool, '/robot1/task_complete', self.tb_task_complete_callback, 1)
+            self.task_complete = False
 
 
     def tb_task_complete_callback(self, msg):
-        # We will only publish here when the task is completed
-        # Otherwise there will be no publishers
         self.task_complete = True
 
     def camera_info_callback(self, msg):
@@ -455,12 +464,40 @@ class HandoffDemo(Node):
             self.object_detected = True
             self.get_logger().info(f"{self.dXYZ.keys()}")
 
+    
+    def tag_detection_result_callback(self, msg):
+        if len(msg.detections)>0:
+            detections = msg.detections
+
+            self.tag_dXYZ = {}
+            for i in range(len(detections)):
+                obj = detections[i].results[0].hypothesis.class_id
+
+                dx = (detections[i].results[0].pose.pose.position.x)/1000.
+                dy = (detections[i].results[0].pose.pose.position.y)/1000.
+                dz = (detections[i].results[0].pose.pose.position.z)/1000.
+
+                self.tag_dXYZ = [0., 0., 0., -dy, 0., 0., 0., -dx, 0., 0., 0., 0]
+
+                self.get_logger().info(f"Tag detected!: {dx, dy, dz}")
+
+            # self.get_logger().info(f"found {obj}: {self.deltaPixel} | {self.dXYZ}")
+            self.tag_detected = True
+        else:
+            self.tag_detected = False
+
 
     def pulbish_ee_goal(self, ee_position):
         msg = Float32MultiArray()
         msg.data = ee_position
         self.ee_goal = ee_position
         self.publisher_ee_position.publish(msg)
+
+    def pulbish_ee_handoff_goal(self, ee_position):
+        msg = Float32MultiArray()
+        msg.data = ee_position
+        self.ee_goal = ee_position
+        self.publisher_ee_handoff_position.publish(msg)
             
     def publish_ur_command(self, joint_goal):
         # self.get_logger().info(f"publishing {joint_goal}")
@@ -472,12 +509,18 @@ class HandoffDemo(Node):
         msg = Bool()
         msg.data = detection
         self.publisher_detection_request.publish(msg)
+    
+    def publish_tag_detection_request(self, detection):
+        msg = Bool()
+        msg.data = detection
+        self.publisher_tag_detection_request.publish(msg)
+        
         
 
 def main():
     rclpy.init()
     
-    node = HandoffDemo()
+    node = Handoff()
 
     node.get_logger().info(f"Warming up the system")
     node.get_logger().info("Creating gripper...")
@@ -488,19 +531,17 @@ def main():
     node.get_logger().info("Activating gripper...")
     gripper.activate()
 
-
-    ####################################
-    # Notify turtlebot to move to handoff pose.
+    #######################################
     handoff_pose = PoseStamped()
     handoff_pose.header.frame_id = 'map'
-    handoff_pose.pose.position.x = 1.0
-    handoff_pose.pose.position.y = 0.0
-    handoff_pose.pose.orientation.z = 0.0
-    handoff_pose.pose.orientation.w = 1.0
-
-    # Publish handoff goal to turtlebot
-    tb_goal_pub.publish(handoff_pose)
-    ####################################
+    handoff_pose.pose.position.x = 0.45
+    handoff_pose.pose.position.y = -3.0
+    handoff_pose.pose.orientation.z = -0.25
+    handoff_pose.pose.orientation.w = 0.96
+    if node.use_turtlebot:
+        # Turtlebot codes
+        # Send handoff pose goal to turtlebot
+        node.tb_goal_pub.publish(handoff_pose)
     
 
     ####################################
@@ -512,9 +553,10 @@ def main():
         rclpy.spin_once(node)
     node.get_logger().info("Found IK")
     node.joint_goal = node.ik_joint
-    # node.joint_goal[0] -= np.pi # Base Rotation. Need to generalize this.
+    node.joint_goal[0] -= np.pi # Base Rotation. Need to generalize this.
 
     node.publish_ur_command(node.joint_goal)
+
     while not node.joint_goal_reached:
         rclpy.spin_once(node)
     node.joint_goal_reached = False
@@ -549,9 +591,10 @@ def main():
             node.pulbish_ee_goal(init_ee)
             rclpy.spin_once(node)
         node.joint_goal = node.ik_joint
-        # node.joint_goal[0] -= np.pi # Base Rotation. Need to generalize this.
+        node.joint_goal[0] -= np.pi # Base Rotation. Need to generalize this.
 
         node.publish_ur_command(node.joint_goal)
+        
         while not node.joint_goal_reached:
             rclpy.spin_once(node)
         node.joint_goal_reached = False
@@ -569,11 +612,29 @@ def main():
             node.pulbish_ee_goal(node.ee_goal)
             rclpy.spin_once(node)
         node.joint_goal = node.ik_joint
-        # node.joint_goal[0] -= np.pi 
+        node.joint_goal[0] -= np.pi 
 
         node.publish_ur_command(node.joint_goal)
-        while not node.joint_goal_reached:
+        first = True
+        tic = time.time()
+        cnt = 0
+        node.get_logger().info(f"goal reached?: {node.joint_goal_reached}")
+        node.get_logger().info(f"time elapsed?: {time.time() - tic < 11}")
+        while time.time() - tic < 11:
+
+            if time.time() - tic > 10 and cnt < 10:
+                if node.use_turtlebot:
+                    node.tb_goal_pub.publish(handoff_pose)
+                    cnt += 1
+                    tic = time.time()
+                    break
+
+            while not node.joint_goal_reached:
+                node.get_logger().info(f".. goal reached?: {node.joint_goal_reached}")
+                node.get_logger().info(f".. time elapsed?: {time.time() - tic < 11}")
+                rclpy.spin_once(node)
             rclpy.spin_once(node)
+                
         node.joint_goal_reached = False
         time.sleep(0.1)
 
@@ -589,7 +650,7 @@ def main():
             node.pulbish_ee_goal(node.ee_goal)
             rclpy.spin_once(node)
         node.joint_goal = node.ik_joint
-        # node.joint_goal[0] -= np.pi 
+        node.joint_goal[0] -= np.pi 
 
         node.publish_ur_command(node.joint_goal)
         while not node.joint_goal_reached:
@@ -609,7 +670,7 @@ def main():
             node.pulbish_ee_goal(node.ee_goal)
             rclpy.spin_once(node)
         node.joint_goal = node.ik_joint
-        # node.joint_goal[0] -= np.pi 
+        node.joint_goal[0] -= np.pi 
 
         node.publish_ur_command(node.joint_goal)
         while not node.joint_goal_reached:
@@ -630,7 +691,7 @@ def main():
             node.pulbish_ee_goal(node.ee_goal)
             rclpy.spin_once(node)
         node.joint_goal = node.ik_joint
-        # node.joint_goal[0] -= np.pi 
+        node.joint_goal[0] -= np.pi 
 
         node.publish_ur_command(node.joint_goal)
         while not node.joint_goal_reached:
@@ -638,36 +699,40 @@ def main():
         node.joint_goal_reached = False
 
 
-        ####################################
-        # TODO: Move to hover position
-        ####################################
 
-
-        ####################################
-        # TODO: Wait for turtlebot to get to handoff position
-        start_time = time.time()
-        while not node.task_complete:
-            # resend handoff goal every 60 seconds if task is not complete
-            if time.time() - start_time >= 60:
-                # Publish handoff goal to turtlebot
-                tb_goal_pub.publish(handoff_pose)
-            rclpy.spin_once(node)
-        ####################################
-
-
-        ###################################
-        # TODO: Move to handoff backoff position
-        ####################################
-
+        ##############################################
+        ### Turtlebot codes
+        ##############################################
+        # Wait for turtlebot to get to handoff pose
+        if node.use_turtlebot:
+            start_time = time.time()
+            while not node.task_complete:
+                if time.time() - start_time >= 60:
+                    node.tb_goal_pub.publish(handoff_pose)
+                rclpy.spin_once(node)
 
         ####################################
         # Move to the target backoff position
-        if "bottle" in name:
-            node.ee_goal = [0., 0., -1., -0.3,       0., -1., 0., -0.4,       -1., 0., 0., 0.2]
-        else:
-            node.ee_goal = [0., 0., 1., -0.3,       0., 1., 0., 0.,       -1., 0., 0., 0.2]
+        # if "bottle" in name:
+        #     node.ee_goal = [0., 0., 1., 0.3,       0., 1., 0., 0.4,       -1., 0., 0., 0.2]
+        # else:
+        #     node.ee_goal = [0., 0., 1., 0.3,       0., 1., 0., -0.3,       -1., 0., 0., 0.2]
+        node.ee_goal = init_ee
+        node.ik_joint = []
+        while len(node.ik_joint) == 0:
+            node.pulbish_ee_goal(node.ee_goal)
+            rclpy.spin_once(node)
+        node.joint_goal = node.ik_joint
+        node.joint_goal[0] -= np.pi 
 
-        node.ee_goal[-1] = 0.3
+        node.publish_ur_command(node.joint_goal)
+        while not node.joint_goal_reached:
+            rclpy.spin_once(node)
+        node.joint_goal_reached = False
+
+
+        node.ee_goal = init_ee
+        node.ee_goal[-1] = 0.5
         node.ik_joint = []
         while len(node.ik_joint) == 0:
             node.pulbish_ee_goal(node.ee_goal)
@@ -679,10 +744,64 @@ def main():
         while not node.joint_goal_reached:
             rclpy.spin_once(node)
         node.joint_goal_reached = False
+
+        # ####################################
+        # # Move to the target grasp position
+        # node.ee_goal[-1] = 0.3
+        # node.ik_joint = []
+        # while len(node.ik_joint) == 0:
+        #     node.pulbish_ee_goal(node.ee_goal)
+        #     rclpy.spin_once(node)
+        # node.joint_goal = node.ik_joint
+        # # node.joint_goal[0] -= np.pi 
+
+        # node.publish_ur_command(node.joint_goal)
+        # while not node.joint_goal_reached:
+        #     rclpy.spin_once(node)
+        # node.joint_goal_reached = False
+
+        # # Open the gripper
+        # gripper.move_and_wait_for_pos(0, 255, 255)
+        # time.sleep(0.1)
+
+
+        # ####################################
+        # # Move to the targe backoff position
+        # node.ee_goal[-1] = node.backoff_offset
+        # node.ik_joint = []
+        # while len(node.ik_joint) == 0:
+        #     node.pulbish_ee_goal(node.ee_goal)
+        #     rclpy.spin_once(node)
+        # node.joint_goal = node.ik_joint
+        # node.joint_goal[0] -= np.pi 
+
+        # node.publish_ur_command(node.joint_goal)
+        # while not node.joint_goal_reached:
+        #     rclpy.spin_once(node)
+        # node.joint_goal_reached = False
+
+
+        node.get_logger().info("detacting tags")
+        while not node.tag_detected:
+            node.publish_tag_detection_request(True)
+            rclpy.spin_once(node)
+            # For debug purpose
+            # node.object_detected = False
+        node.get_logger().info(f"tag detected")
+        node.publish_tag_detection_request(False)
+        node.tag_detected = False
+        rclpy.spin_once(node)
+        time.sleep(1)
+
 
         ####################################
-        # Move to the target grasp position
-        node.ee_goal[-1] = 0.3
+        # Move to the hover position
+        dXYZ = node.tag_dXYZ
+        node.get_logger().info("hover 2")
+        node.ee_goal = [x + y for x, y in zip(node.ee_goal, dXYZ)]
+        # node.ee_goal = [0.0, 0.0, 1.0, 0.4998706512451172, 0.0, 1.0, 0.0, -0.0204814977645874, -1.0, 0.0, 0.0, 0.5]
+        node.get_logger().info(f"{node.ee_goal}")
+        node.ee_goal[-1] = node.hover_offset
         node.ik_joint = []
         while len(node.ik_joint) == 0:
             node.pulbish_ee_goal(node.ee_goal)
@@ -694,29 +813,54 @@ def main():
         while not node.joint_goal_reached:
             rclpy.spin_once(node)
         node.joint_goal_reached = False
+        time.sleep(0.1)
+
+
+
+        # 
+        node.get_logger().info(f"Lower the gripper")
+        node.ee_goal[-1] = - 0.5
+        node.ik_joint = []
+        tic = time.time()
+        while len(node.ik_joint) == 0:
+            if time.time() - tic > 1.5:
+                node.ee_goal[-1] += 0.01
+                tic = time.time() 
+            node.pulbish_ee_handoff_goal(node.ee_goal)
+            rclpy.spin_once(node)
+
+        node.joint_goal = node.ik_joint
+        # node.joint_goal[0] -= np.pi 
+
+        node.publish_ur_command(node.joint_goal)
+        while not node.joint_goal_reached:
+            rclpy.spin_once(node)
+        node.joint_goal_reached = False
+        time.sleep(0.1)
+
 
         # Open the gripper
         gripper.move_and_wait_for_pos(0, 255, 255)
         time.sleep(0.1)
 
+        # ##############################################
+        # ### Turtlebot codes
+        # ##############################################
+        # Send drop off pose to turtlebot
+        if node.use_turtlebot:
+            drop_off_pose = PoseStamped()
+            drop_off_pose.header.frame_id = 'map'
+            drop_off_pose.pose.position.x = 2.0
+            drop_off_pose.pose.position.x = -0.5
+            drop_off_pose.pose.orientation.x = 0.0
+            drop_off_pose.pose.orientation.x = 1.0
+            node.tb_goal_pub.publish(drop_off_pose)
+            node.task_complete = False
 
-        ####################################
-        # TODO: Send home position to turtlebot
-        # Create home goal message
-        home_pose = PoseStamped()
-        home_pose.header.frame_id = 'map'
-        home_pose.pose.position.x = 0.0
-        home_pose.pose.position.y = 0.0
-        home_pose.pose.orientation.z = 0.0
-        home_pose.pose.orientation.w = 1.0
-        node.tb_goal_pub.publish(home_pose)
-        node.task_complete = False
-        ####################################
 
-
-        ####################################
-        # Move to the targe backoff position
-        node.ee_goal[-1] = node.backoff_offset
+        # Go to home
+        node.get_logger().info(f"Hover 3")
+        node.ee_goal = init_ee
         node.ik_joint = []
         while len(node.ik_joint) == 0:
             node.pulbish_ee_goal(node.ee_goal)
@@ -728,12 +872,32 @@ def main():
         while not node.joint_goal_reached:
             rclpy.spin_once(node)
         node.joint_goal_reached = False
+        time.sleep(0.1)
 
-        ####################################
-        # TODO: Wait for turtlebot to get home
-        while not node.task_complete:
+
+        # Go to home
+        node.get_logger().info(f"Home")
+        node.ee_goal = init_ee
+        node.ik_joint = []
+        while len(node.ik_joint) == 0:
+            node.pulbish_ee_goal(node.ee_goal)
             rclpy.spin_once(node)
-        ####################################
+        node.joint_goal = node.ik_joint
+        node.joint_goal[0] -= np.pi 
+
+        node.publish_ur_command(node.joint_goal)
+        while not node.joint_goal_reached:
+            rclpy.spin_once(node)
+        node.joint_goal_reached = False
+        time.sleep(0.1)
+
+        ##############################################
+        ### Turtlebot codes
+        ##############################################
+        # Wait for turtlebot to get to dropoff
+        if node.use_turtlebot:
+            while not node.task_complete:
+                rclpy.spin_once(node)
 
 
     # Terminate the nodes
